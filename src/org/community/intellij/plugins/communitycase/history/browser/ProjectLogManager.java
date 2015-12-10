@@ -113,7 +113,6 @@ public class ProjectLogManager {
 
   public void activate() {
     myVcsManager.addVcsListener(myListener);
-    recalculateWindows();
     myConnection = myProject.getMessageBus().connect(myProject);
     myConnection.subscribe(CHECK_CURRENT_BRANCH, myCurrentBranchListener);
   }
